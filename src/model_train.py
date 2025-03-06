@@ -20,6 +20,8 @@ class model_train():
         scaler = StandardScaler()
         X_scaled = scaler.fit_transform(X)
 
+        joblib.dump(scaler,r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\models\scaler')
+
         X_train, X_test, y_train, y_test = train_test_split(X_scaled,y,test_size = 0.2)
 
         models = [LogisticRegression(), DecisionTreeClassifier(random_state=42), 
