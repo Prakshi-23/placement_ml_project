@@ -14,7 +14,8 @@ class hyperparametertuning():
         pass
     def hyperparameter_tuning(self):
 
-        model = joblib.load(r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\models\model')
+        model = joblib.load(r'C:\Users\HOME\Python-Jupyter\bootcamp_feb25\models\model')
+        # scaler = joblib.load(r'C:\Users\HOME\Python-Jupyter\bootcamp_feb25\models\scaler')
 
         
         # Define hyperparameters for tuning
@@ -45,7 +46,7 @@ class hyperparametertuning():
 
         param_grid = param_grid[str(model)]
 
-        df=pd.read_csv(r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\data\preprocess_data\preprocessed.csv')
+        df=pd.read_csv(r'C:\Users\HOME\Python-Jupyter\bootcamp_feb25\data\preprocess_data\preprocessed.csv')
 
         X = df.drop(columns=["PlacementStatus_Placed"])
         y = df["PlacementStatus_Placed"]

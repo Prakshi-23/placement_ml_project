@@ -5,14 +5,14 @@ class datacleaning():
     def __init__(self):
         pass
     def data_cleaning(self):
-        df = pd.read_csv(r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\data\raw_data\raw.csv')
+        df = pd.read_csv(r'C:\Users\HOME\Python-Jupyter\bootcamp_feb25\data\raw_data\raw.csv')
         df.info()
         df.describe()
         df.duplicated().sum()
         df.isnull().sum()
 
-        os.makedirs(r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\data\cleaned_data',exist_ok=True)
-        df.to_csv(r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\data\cleaned_data\cleaned_data.csv',index=False)
+        os.makedirs(r'C:\Users\HOME\Python-Jupyter\bootcamp_feb25\data\cleaned_data',exist_ok=True)
+        df.to_csv(r'C:\Users\HOME\Python-Jupyter\bootcamp_feb25\data\cleaned_data\cleaned_data.csv',index=False)
 
 if __name__=='__main__':
     try:

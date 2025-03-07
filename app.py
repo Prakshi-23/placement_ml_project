@@ -65,15 +65,14 @@
 #     st.write(f"### Prediction: {result}")
 
 
-
+import joblib
 import streamlit as st
 import pandas as pd
-import joblib 
 import numpy as np
 
 # Load the trained scaler and model
-scaler = joblib.load(r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\models\scaler')
-model = joblib.load(r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\models\best_model')
+scaler = joblib.load(r'C:\Users\HOME\Python-Jupyter\bootcamp_feb25\models\scaler')
+model = joblib.load(r'C:\Users\HOME\Python-Jupyter\bootcamp_feb25\models\best_model')
 
 st.header('Placement Prediction App')  # App name
 

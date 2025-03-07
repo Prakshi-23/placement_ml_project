@@ -12,7 +12,7 @@ class model_train():
     def __init__(self):
         pass
     def model_training(self):
-        df=pd.read_csv(r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\data\preprocess_data\preprocessed.csv')
+        df=pd.read_csv(r'C:\Users\HOME\Python-Jupyter\bootcamp_feb25\data\preprocess_data\preprocessed.csv')
         X = df.drop(columns=["PlacementStatus_Placed"])
         y = df["PlacementStatus_Placed"]
 
@@ -20,7 +20,7 @@ class model_train():
         scaler = StandardScaler()
         X_scaled = scaler.fit_transform(X)
 
-        joblib.dump(scaler,r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\models\scaler')
+        joblib.dump(scaler,r'C:\Users\HOME\Python-Jupyter\bootcamp_feb25\models\scaler')
 
         X_train, X_test, y_train, y_test = train_test_split(X_scaled,y,test_size = 0.2)
 
@@ -39,9 +39,9 @@ class model_train():
         model = [a for a,b in d.items() if b == max(d.values())][0]
 
        
-        os.makedirs(r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\models',exist_ok=True)
+        os.makedirs(r'C:\Users\HOME\Python-Jupyter\bootcamp_feb25\models',exist_ok=True)
 
-        joblib.dump(model,r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\models\model')
+        joblib.dump(model,r'C:\Users\HOME\Python-Jupyter\bootcamp_feb25\models\model')
 
 if __name__=='__main__':
     try:

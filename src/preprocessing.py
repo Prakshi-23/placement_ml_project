@@ -6,7 +6,7 @@ class preprocessing():
     def __init__(self):
         pass
     def data_preprocessing(self):
-        df=pd.read_csv(r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\data\cleaned_data\cleaned_data.csv')
+        df=pd.read_csv(r'C:\Users\HOME\Python-Jupyter\bootcamp_feb25\data\cleaned_data\cleaned_data.csv')
 
 
         cat_col = df.select_dtypes(include='object').columns.to_list()
@@ -17,8 +17,8 @@ class preprocessing():
 
         df.drop('StudentID',axis=1,inplace=True)
 
-        os.makedirs(r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\data\preprocess_data',exist_ok=True)
-        df.to_csv(r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\data\preprocess_data\preprocessed.csv',index= False)
+        os.makedirs(r'C:\Users\HOME\Python-Jupyter\bootcamp_feb25\data\preprocess_data',exist_ok=True)
+        df.to_csv(r'C:\Users\HOME\Python-Jupyter\bootcamp_feb25\data\preprocess_data\preprocessed.csv',index= False)
 
 if __name__=='__main__':
     try:
