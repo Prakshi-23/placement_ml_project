@@ -4,8 +4,8 @@
 # import numpy as np
 # from sklearn.preprocessing import StandardScaler
 
-# scaler = joblib.load(r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\models\scaler')
-# model = joblib.load(r'C:\Users\HOME\Python-Jupyter\bootcamp feb25\models\best_model')
+# scaler = joblib.load(r'models/scaler')
+# model = joblib.load(r'models/best_model')
 
 # st.header('Placement Prediction App') # App name
 
