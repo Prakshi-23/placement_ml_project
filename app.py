@@ -71,8 +71,8 @@ import pandas as pd
 import numpy as np
 
 # Load the trained scaler and model
-scaler = joblib.load('models\scaler')
-model = joblib.load('models\best_model')
+scaler = joblib.load('scaler')
+model = joblib.load('best_model')
 
 st.header('Placement Prediction App')  # App name
 
