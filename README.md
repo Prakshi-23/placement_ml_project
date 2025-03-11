@@ -93,4 +93,4 @@ streamlit run app.py
 - Expand deployment options using Flask/Django for a web-based solution.
 
 ## Author
-[Your Name]
+Prakshi Karkera
